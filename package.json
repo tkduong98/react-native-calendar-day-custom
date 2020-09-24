@@ -1,12 +1,12 @@
 {
-  "name": "react-native-big-calendar",
+  "name": "react-native-calendar-day-custom",
   "version": "0.5.0",
   "main": "build/index.js",
   "jsnext:main": "build/index.es.js",
   "module": "build/index.es.js",
   "types": "build/index.d.ts",
-  "repository": "git@github.com:llotheo/react-native-big-calendar",
-  "author": "gosho-kazuya <ketsume0211@gmail.com>",
+  "repository": "https://github.com/tkduong98/react-native-calendar-day-custom.git",
+  "author": "Thai Khac Duong",
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 7007",
@@ -19,11 +19,12 @@
     "watch": "rollup -cw",
     "prepublish": "npm run build",
     "build": "npm-run-all build:clean build:ts",
-    "build:clean": "rm -rf build/",
-    "build:ts": "env NODE_ENV=production rollup -c"
+    "build:clean": "rimraf build/",
+    "build:ts": "NODE_ENV=production rollup -c"
   },
   "dependencies": {
-    "dayjs": "^1.8.34"
+    "dayjs": "^1.8.34",
+    "rimraf": "^3.0.2"
   },
   "peerDependencies": {
     "react": "^16.8.3",
